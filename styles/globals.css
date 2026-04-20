@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base font */
+body {
+  @apply font-sans;
+}
+
+/* Heading style global */
+h1, h2, h3, h4 {
+  @apply font-heading tracking-tight;
+}
