@@ -62,7 +62,7 @@ export default function Navbar() {
           </Link>
 
           <Link
-            href="/#lacak"
+            href="/#tracking"
             className="ml-4 px-4 py-2 bg-green-500 text-white rounded-xl shadow-lg hover:bg-green-600 transition"
           >
             Lacak Order
@@ -102,57 +102,57 @@ export default function Navbar() {
             >
               {/* ===== MENU LIST ===== */}
               <div className="flex flex-col">
-                <a
+                <Link
                   onClick={() => setOpen(false)}
-                  href="#home"
+                  href="/#home"
                   className="px-5 py-4 border-b text-gray-700 hover:bg-green-50 transition"
                 >
                   Home
-                </a>
-
-                <a
-                  onClick={() => setOpen(false)}
-                  href="#services"
-                  className="px-5 py-4 border-b text-gray-700 hover:bg-green-50 transition"
-                >
-                  Layanan
-                </a>
-
-                <a
-                  onClick={() => setOpen(false)}
-                  href="#pricing"
-                  className="px-5 py-4 border-b text-gray-700 hover:bg-green-50 transition"
-                >
-                  Paket
-                </a>
-
-                <a
-                  onClick={() => setOpen(false)}
-                  href="#gallery"
-                  className="px-5 py-4 border-b text-gray-700 hover:bg-green-50 transition"
-                >
-                  Galeri
-                </a>
-
-                <a
-                  onClick={() => setOpen(false)}
-                  href="#why-us"
-                  className="px-5 py-4 border-b text-gray-700 hover:bg-green-50 transition"
-                >
-                  Why Us
-                </a>
-
-                <a
-                  onClick={() => setOpen(false)}
-                  href="#testimonials"
-                  className="px-5 py-4 border-b text-gray-700 hover:bg-green-50 transition"
-                >
-                  Testimonials
-                </a>
+                </Link>
 
                 <Link
                   onClick={() => setOpen(false)}
-                  href="/tracking"
+                  href="/#services"
+                  className="px-5 py-4 border-b text-gray-700 hover:bg-green-50 transition"
+                >
+                  Layanan
+                </Link>
+
+                <Link
+                  onClick={() => setOpen(false)}
+                  href="/#pricing"
+                  className="px-5 py-4 border-b text-gray-700 hover:bg-green-50 transition"
+                >
+                  Paket
+                </Link>
+
+                <Link
+                  onClick={() => setOpen(false)}
+                  href="/#gallery"
+                  className="px-5 py-4 border-b text-gray-700 hover:bg-green-50 transition"
+                >``
+                  Galeri
+                </Link>
+
+                <Link
+                  onClick={() => setOpen(false)}
+                  href="/#why-us"
+                  className="px-5 py-4 border-b text-gray-700 hover:bg-green-50 transition"
+                >
+                  Why Us
+                </Link>
+
+                <Link
+                  onClick={() => setOpen(false)}
+                  href="/#testimonials"
+                  className="px-5 py-4 border-b text-gray-700 hover:bg-green-50 transition"
+                >
+                  Testimonials
+                </Link>
+
+                <Link
+                  onClick={() => setOpen(false)}
+                  href="/#tracking"
                   className="px-5 py-4 text-green-600 font-semibold hover:bg-green-50 transition"
                 >
                   Lacak Order

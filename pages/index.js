@@ -10,7 +10,19 @@ import { Menu, X } from "lucide-react";
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
+import { Inter, Poppins } from "next/font/google";
 
+export const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
+
+export const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+  variable: "--font-poppins",
+});
+<body className={`${inter.variable} ${poppins.variable} font-sans`}></body>
 export default function Home() {
   const ref = useRef(null);
   const [active, setActive] = useState("home");

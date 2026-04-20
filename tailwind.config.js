@@ -5,9 +5,9 @@ module.exports = {
   ],
    theme: {
     extend: {
-      fontFamily: {
-        sans: ['var(--font-inter)'],
-        heading: ['var(--font-jakarta)'],
+       fontFamily: {
+        sans: ["Inter", "system-ui", "sans-serif"],
+        heading: ["Poppins", "Inter", "sans-serif"],
       },
     },
   },
