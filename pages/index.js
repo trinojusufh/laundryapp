@@ -291,7 +291,7 @@ export default function Home() {
       </motion.a>
 
       <motion.a
-        href="#lacak"
+        href="/tracking"
         whileHover={{ scale: 1.05 }}
         className="
           px-6 py-3 rounded-xl
