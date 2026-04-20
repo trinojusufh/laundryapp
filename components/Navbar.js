@@ -71,7 +71,7 @@ export default function Navbar() {
 
         {/* Hamburger */}
         <button className="md:hidden" onClick={() => setOpen(!open)}>
-          {open ? <X size={28} /> : <Menu size={28} />}
+          {open ? <X className="text-green-600" size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
@@ -130,7 +130,7 @@ export default function Navbar() {
                   onClick={() => setOpen(false)}
                   href="/#gallery"
                   className="px-5 py-4 border-b text-gray-700 hover:bg-green-50 transition"
-                >``
+                >
                   Galeri
                 </Link>
 
