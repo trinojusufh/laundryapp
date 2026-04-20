@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 export default function Navbar() {
   const ref = useRef(null);
   const [active, setActive] = useState("lacak");
@@ -82,7 +83,7 @@ export default function Navbar() {
             className="fixed inset-0 bg-black/40 backdrop-blur-sm z-40"
           />
 
-          {/* Menu */}
+          {/* MENU PANEL */}
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -93,83 +94,85 @@ export default function Navbar() {
           >
             <div
               className="
-          w-[90%] max-w-md
+          w-[92%] max-w-md
           bg-white/95 backdrop-blur-xl
           rounded-2xl shadow-2xl
-          p-6 space-y-4
+          overflow-hidden
         "
             >
-              <Link
-                onClick={() => setOpen(false)}
-                href="/#home"
-                className={navLink("home")}
-              >
-                Home
-              </Link>
+              {/* ===== MENU LIST ===== */}
+              <div className="flex flex-col">
+                <a
+                  onClick={() => setOpen(false)}
+                  href="#home"
+                  className="px-5 py-4 border-b text-gray-700 hover:bg-green-50 transition"
+                >
+                  Home
+                </a>
 
-              <Link
-                onClick={() => setOpen(false)}
-                href="/#services"
-                className={navLink("services")}
-              >
-                Layanan
-              </Link>
+                <a
+                  onClick={() => setOpen(false)}
+                  href="#services"
+                  className="px-5 py-4 border-b text-gray-700 hover:bg-green-50 transition"
+                >
+                  Layanan
+                </a>
 
-              <Link
-                onClick={() => setOpen(false)}
-                href="/#pricing"
-                className={navLink("pricing")}
-              >
-                Paket
-              </Link>
+                <a
+                  onClick={() => setOpen(false)}
+                  href="#pricing"
+                  className="px-5 py-4 border-b text-gray-700 hover:bg-green-50 transition"
+                >
+                  Paket
+                </a>
 
-              <Link
-                onClick={() => setOpen(false)}
-                href="/#gallery"
-                className={navLink("gallery")}
-              >
-                Galeri
-              </Link>
+                <a
+                  onClick={() => setOpen(false)}
+                  href="#gallery"
+                  className="px-5 py-4 border-b text-gray-700 hover:bg-green-50 transition"
+                >
+                  Galeri
+                </a>
 
-              <Link
-                onClick={() => setOpen(false)}
-                href="/#why-us"
-                className={navLink("why-us")}
-              >
-                Why Us
-              </Link>
+                <a
+                  onClick={() => setOpen(false)}
+                  href="#why-us"
+                  className="px-5 py-4 border-b text-gray-700 hover:bg-green-50 transition"
+                >
+                  Why Us
+                </a>
 
-              <Link
-                onClick={() => setOpen(false)}
-                href="/#testimonials"
-                className={navLink("testimonials")}
-              >
-                Testimonials
-              </Link>
+                <a
+                  onClick={() => setOpen(false)}
+                  href="#testimonials"
+                  className="px-5 py-4 border-b text-gray-700 hover:bg-green-50 transition"
+                >
+                  Testimonials
+                </a>
 
-              <Link
-                onClick={() => setOpen(false)}
-                href="/#lacak"
-                className={navLink("lacak")}
-              >
-                Lacak Order
-              </Link>
+                <Link
+                  onClick={() => setOpen(false)}
+                  href="/tracking"
+                  className="px-5 py-4 text-green-600 font-semibold hover:bg-green-50 transition"
+                >
+                  Lacak Order
+                </Link>
+              </div>
 
-              {/* Divider */}
-              <div className="border-t pt-4" />
-
-              {/* CTA */}
-              <a
-                href="https://wa.me/628xxxx"
-                className="
-            block text-center
-            bg-green-500 text-white
-            py-3 rounded-xl
-            shadow-lg hover:bg-green-600 transition
-          "
-              >
-                Order Sekarang
-              </a>
+              {/* ===== CTA SECTION ===== */}
+              <div className="p-4 border-t bg-gray-50">
+                <a
+                  href="https://wa.me/628xxxx"
+                  className="
+              block text-center
+              bg-green-500 text-white
+              py-3 rounded-xl
+              shadow-md hover:bg-green-600 transition
+            "
+                >
+                  Order Sekarang
+                </a>
+              </div>
             </div>
           </motion.div>
         </>

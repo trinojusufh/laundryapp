@@ -42,24 +42,29 @@ const handleTrack = () => {
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
 
           {/* LEFT IMAGE */}
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="hidden md:block"
-          >
-            <div className="relative">
-              <img
-                src="/image/bg-6.png"
-                alt="tracking laundry"
-                className="w-full"
-              />
+         <motion.div
+  initial={{ opacity: 0, x: -40 }}
+  animate={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.6 }}
+  className="w-full md:block"
+>
+  <div className="relative">
+    <img
+      src="/image/bg-6.png"
+      alt="tracking laundry"
+      className="
+        w-full md:w-auto
+        max-h-[220px] md:max-h-none
+        object-contain md:object-cover
+        mx-auto
+      "
+    />
 
-              <div className="absolute -bottom-5 left-5 bg-white/80 backdrop-blur px-4 py-2 rounded-xl shadow-lg text-sm">
-                🔥 Live Tracking System
-              </div>
-            </div>
-          </motion.div>
+    <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 md:left-5 md:translate-x-0 bg-white/80 backdrop-blur px-3 py-1 rounded-xl shadow text-xs">
+      🔥 Live Tracking System
+    </div>
+  </div>
+</motion.div>
 
           {/* RIGHT CONTENT */}
           <div className="w-full">

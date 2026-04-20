@@ -85,7 +85,10 @@ export default function Home() {
             <a href="#testimonials" className={navLink("testimonials")}>
               Testimonials
             </a>
-            <Link href="/tracking" className="ml-4 px-4 py-2 bg-green-500 text-white rounded-xl shadow-lg hover:bg-green-600 transition">
+            <Link
+              href="/tracking"
+              className="ml-4 px-4 py-2 bg-green-500 text-white rounded-xl shadow-lg hover:bg-green-600 transition"
+            >
               Lacak Order
             </Link>
           </div>
@@ -96,199 +99,230 @@ export default function Home() {
           </button>
         </div>
 
-        {open && (
-          <>
-            {/* Overlay */}
-            <div
-              onClick={() => setOpen(false)}
-              className="fixed inset-0 bg-black/40 backdrop-blur-sm z-40"
-            />
+       {open && (
+  <>
+    {/* Overlay */}
+    <div
+      onClick={() => setOpen(false)}
+      className="fixed inset-0 bg-black/40 backdrop-blur-sm z-40"
+    />
 
-            {/* Menu */}
-            <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="
+    {/* MENU PANEL */}
+    <motion.div
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      className="
         fixed top-16 left-0 w-full z-50
         flex justify-center
       "
-            >
-              <div
-                className="
-          w-[90%] max-w-md
+    >
+      <div
+        className="
+          w-[92%] max-w-md
           bg-white/95 backdrop-blur-xl
           rounded-2xl shadow-2xl
-          p-6 space-y-4
+          overflow-hidden
         "
-              >
-                <a
-                  onClick={() => setOpen(false)}
-                  href="#home"
-                  className={navLink("home")}
-                >
-                  Home
-                </a>
-                <a
-                  onClick={() => setOpen(false)}
-                  href="#services"
-                  className={navLink("services")}
-                >
-                  Layanan
-                </a>
-                <a
-                  onClick={() => setOpen(false)}
-                  href="#pricing"
-                  className={navLink("pricing")}
-                >
-                  Paket
-                </a>
-                <a
-                  onClick={() => setOpen(false)}
-                  href="#gallery"
-                  className={navLink("gallery")}
-                >
-                  Galeri
-                </a>
-                <a
-                  onClick={() => setOpen(false)}
-                  href="#why-us"
-                  className={navLink("why-us")}
-                >
-                  Why Us
-                </a>
-                <a
-                  onClick={() => setOpen(false)}
-                  href="#testimonials"
-                  className={navLink("testimonials")}
-                >
-                  Testimonials
-                </a>
-                <Link
-                  onClick={() => setOpen(false)}
-                  href="/tracking"
-                  className={navLink("tracking")}
-                >
-                  Lacak Order
-                </Link>
+      >
 
-                {/* Divider */}
-                <div className="border-t pt-4" />
+        {/* ===== MENU LIST ===== */}
+        <div className="flex flex-col">
 
-                {/* CTA */}
-                <a
-                  href="https://wa.me/628xxxx"
-                  className="
-            block text-center
-            bg-green-500 text-white
-            py-3 rounded-xl
-            shadow-lg hover:bg-green-600 transition
-          "
-                >
-                  Order Sekarang
-                </a>
-              </div>
-            </motion.div>
-          </>
+          <a
+            onClick={() => setOpen(false)}
+            href="#home"
+            className="px-5 py-4 border-b text-gray-700 hover:bg-green-50 transition"
+          >
+            Home
+          </a>
+
+          <a
+            onClick={() => setOpen(false)}
+            href="#services"
+            className="px-5 py-4 border-b text-gray-700 hover:bg-green-50 transition"
+          >
+            Layanan
+          </a>
+
+          <a
+            onClick={() => setOpen(false)}
+            href="#pricing"
+            className="px-5 py-4 border-b text-gray-700 hover:bg-green-50 transition"
+          >
+            Paket
+          </a>
+
+          <a
+            onClick={() => setOpen(false)}
+            href="#gallery"
+            className="px-5 py-4 border-b text-gray-700 hover:bg-green-50 transition"
+          >
+            Galeri
+          </a>
+
+          <a
+            onClick={() => setOpen(false)}
+            href="#why-us"
+            className="px-5 py-4 border-b text-gray-700 hover:bg-green-50 transition"
+          >
+            Why Us
+          </a>
+
+          <a
+            onClick={() => setOpen(false)}
+            href="#testimonials"
+            className="px-5 py-4 border-b text-gray-700 hover:bg-green-50 transition"
+          >
+            Testimonials
+          </a>
+
+          <Link
+            onClick={() => setOpen(false)}
+            href="/tracking"
+            className="px-5 py-4 text-green-600 font-semibold hover:bg-green-50 transition"
+          >
+            Lacak Order
+          </Link>
+        </div>
+
+        {/* ===== CTA SECTION ===== */}
+        <div className="p-4 border-t bg-gray-50">
+          <a
+            href="https://wa.me/628xxxx"
+            className="
+              block text-center
+              bg-green-500 text-white
+              py-3 rounded-xl
+              shadow-md hover:bg-green-600 transition
+            "
+          >
+            Order Sekarang
+          </a>
+        </div>
+
+      </div>
+    </motion.div>
+  </>
+
         )}
       </nav>
       {/* Hero */}
-      <section
-        id="home"
-        className="relative h-screen flex flex-col justify-center items-center text-center px-4 pt-20 overflow-hidden"
-      >
-        {/* Background */}
-        <img
-          src="/image/bg-1.jpg"
-          alt="bg"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+    <section
+  id="home"
+  className="relative min-h-screen flex items-center justify-center overflow-hidden px-5 pt-24 md:pt-0"
+>
 
-        {/* Strong overlay biar teks & badge kebaca */}
-        <div className="absolute inset-0 bg-black/40 md:bg-white/60" />
+  {/* ===== BACKGROUND IMAGE ===== */}
+  <motion.img
+    initial={{ scale: 1.1 }}
+    animate={{ scale: 1 }}
+    transition={{ duration: 1.2 }}
+    src="/image/bg-1.jpg"
+    alt="bg"
+    className="absolute inset-0 w-full h-full object-cover"
+  />
 
-        {/* Glow animated layer */}
-        <div className="absolute inset-0 bg-gradient-to-r from-green-300/20 via-transparent to-green-300/20 animate-pulse" />
+  {/* ===== OVERLAY LAYER (CINEMATIC) ===== */}
+  <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70 md:from-black/40 md:via-black/30 md:to-black/50" />
 
-        {/* HERO CONTENT */}
-        <motion.div style={{ y: yHero }} className="relative z-10">
-          {/* 🔥 RESPONSIVE OPENING BADGE (FIXED VISIBILITY) */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-            className="
-        mb-5 inline-flex items-center gap-2
+  {/* ===== SOFT GLOW ===== */}
+  <div className="absolute inset-0 bg-gradient-to-r from-green-400/10 via-transparent to-green-400/10 animate-pulse" />
+
+  {/* ===== CONTENT WRAPPER ===== */}
+  <motion.div
+    style={{ y: yHero }}
+    className="relative z-10 flex flex-col items-center text-center max-w-2xl"
+  >
+
+    {/* ===== OPEN BADGE ===== */}
+    <motion.div
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={{ opacity: 1, scale: 1 }}
+      className="
+        mb-4 inline-flex items-center gap-2
         bg-green-600 text-white font-semibold
         px-4 py-2 rounded-full shadow-xl
-        border border-green-300
-        text-xs sm:text-sm md:text-base
+        text-xs sm:text-sm
       "
-          >
-            ⏰ Open Daily: 07:00 - 22:00
-          </motion.div>
+    >
+      ⏰ Open Daily: 07:00 - 22:00
+    </motion.div>
 
-          {/* TITLE */}
-          <motion.h1
-            initial={{ opacity: 0, y: -60 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="
-        text-3xl sm:text-4xl md:text-6xl
-        font-bold text-green-600 relative
+    {/* ===== TITLE (FLUID TYPOGRAPHY) ===== */}
+    <motion.h1
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7 }}
+      className="
+        font-bold text-white leading-tight
+        text-[28px] sm:text-4xl md:text-6xl
       "
-          >
-            {/* glow text */}
-            <span className="absolute inset-0 blur-2xl text-green-400 opacity-40 animate-pulse">
-              Silicon-Level Laundry Experience
-            </span>
-            Silicon-Level Laundry Experience
-          </motion.h1>
+    >
+      Silicon-Level Laundry Experience
+    </motion.h1>
 
-          {/* DESCRIPTION */}
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3 }}
-            className="
+    {/* ===== SUBTITLE ===== */}
+    <motion.p
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.3 }}
+      className="
         mt-4 text-sm sm:text-base md:text-lg
-        max-w-xl mx-auto text-white md:text-gray-700
+        text-white/80 max-w-md
       "
-          >
-            Cepat, bersih, dan wangi premium. Teknologi modern + quality control
-            ketat.
-          </motion.p>
+    >
+      Cepat, bersih, dan wangi premium dengan quality control modern berbasis teknologi.
+    </motion.p>
 
-          {/* CTA */}
-          <motion.a
-            href="#pricing"
-            whileHover={{ scale: 1.1 }}
-            className="
-        mt-6 inline-block
-        px-6 py-3
-        bg-green-500 hover:bg-green-600
-        text-white rounded-xl shadow-lg
-        transition
-      "
-          >
-            Lihat Paket
-          </motion.a>
-        </motion.div>
+    {/* ===== CTA ===== */}
+    <motion.div
+      className="flex flex-col sm:flex-row gap-3 mt-6"
+    >
+      <motion.a
+        href="#pricing"
+        whileHover={{ scale: 1.05 }}
+        className="
+          px-6 py-3 rounded-xl
+          bg-green-500 hover:bg-green-600
+          text-white shadow-lg transition
+        "
+      >
+        Lihat Paket
+      </motion.a>
 
-        {/* FLOATING TRUST BADGE */}
-        <motion.div
-          animate={{ y: [0, -12, 0] }}
-          transition={{ repeat: Infinity, duration: 3 }}
-          className="
-      absolute bottom-8
+      <motion.a
+        href="#lacak"
+        whileHover={{ scale: 1.05 }}
+        className="
+          px-6 py-3 rounded-xl
+          bg-white/10 border border-white/30
+          text-white backdrop-blur
+        "
+      >
+        Lacak Order
+      </motion.a>
+    </motion.div>
+
+    {/* ===== TRUST TEXT ===== */}
+    <p className="mt-5 text-xs text-white/60">
+      👟 1000+ Shoes Cleaned • Trusted Premium Shoe Care
+    </p>
+  </motion.div>
+
+  {/* ===== FLOATING BADGE (DESKTOP ONLY) ===== */}
+  <motion.div
+    animate={{ y: [0, -10, 0] }}
+    transition={{ repeat: Infinity, duration: 3 }}
+    className="
+      hidden md:flex absolute bottom-8
       bg-white/90 text-green-600
       px-4 py-2 rounded-full
-      shadow-lg text-xs sm:text-sm
-      font-medium
+      shadow-lg text-sm font-medium
     "
-        >
-          👟 Premium Shoe Care • 1000+ Shoes Cleaned
-        </motion.div>
-      </section>
+  >
+    ⚡ Real-time Tracking System
+  </motion.div>
+</section>
       {/* Services */}
       <section
         id="services"
