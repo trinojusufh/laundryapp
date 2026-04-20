@@ -63,7 +63,7 @@ export default function Home() {
       <nav className="fixed w-full top-0 left-0 bg-white/70 backdrop-blur-md shadow z-50">
         <div className="max-w-6xl mx-auto flex justify-between items-center p-4">
           {/* Logo */}
-          <h1 className="text- font-bold text-green-500">LaundryKita</h1>
+          <h1 className="text- font-bold text-green-500">Laundry Kita</h1>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-4 lg:gap-8 text-sm lg:text-base">
